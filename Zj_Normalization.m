@@ -18,9 +18,7 @@ classdef Zj_Normalization
             output_data=bsxfun(@times, A, 1./(max(sum(A, 2), eps)));
         end
         
-        
-        
-        
+
     end
     
 end
