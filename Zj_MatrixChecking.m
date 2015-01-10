@@ -5,11 +5,12 @@ classdef Zj_MatrixChecking
    
    methods(Static)
        % check if the matrix is conditional
-       function flag= iscondition(input_mat,thres)
+       function [flag,deg]= iscondition(input_mat,thres)
            if nargin<2
               thres= Zj_MatrixChecking.cond_thres;
            end
-           if cond(input_mat)>thres
+           deg=cond(input_mat);
+           if deg>thres
                flag=1;
            else 
                flag=0;
