@@ -29,6 +29,7 @@ classdef Zj_IO
             % Copyright 2013 by Timothy E. Holy
             
             % Extract the variable values
+            error('Don''t ever use this function!')
             vars = cell(size(varargin));
             for i = 1:numel(vars)
                 vars{i} = evalin('caller', varargin{i});
