@@ -1,4 +1,4 @@
-function  ol_scores  = rectsOverlap( rects,a_rects )
+function  ol_scores  = z_rectsOverlap( rects,a_rects )
 %ol_scores  = rectsOverlap( rects,a_rects )
 %extending ML_Rects.rectOverlap to multiple rects overlap
 %input: rects: n by 4  a_rects: m by 4
@@ -14,9 +14,6 @@ else
         ol_scores(:,i)=ML_RectUtils.rectOverlap(rects(:,1:4)',a_rects(i,1:4)');
     end
 end
-
-
-
 
 end
 
