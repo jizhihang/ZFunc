@@ -149,14 +149,14 @@ classdef Z_RectUtils
                 lineWidth = 3;
             end;
             boxes=Z_RectUtils.rects2boxes(rects);
-            for i=1:size(boxes,2);
-                rectangle('Position', boxes(1:4,i), 'LineWidth', lineWidth, 'EdgeColor', colors{mod(i-1, 6) + 1});
+            for i=1:size(boxes,1);
+                rectangle('Position', boxes(i,1:4), 'LineWidth', lineWidth, 'EdgeColor', colors{mod(i-1, 6) + 1});
             end;
             
             % there are text
             if nargin==4
-                for i=1:size(boxes,2)
-                    text(boxes(1,i), boxes(2,i), text{i}, ...
+                for i=1:size(boxes,1)
+                    text(boxes(i,1), boxes(i,2), text{i}, ...
                         'BackgroundColor',[.7 .9 .7], 'FontSize', 16, ...
                         'HorizontalAlignment', 'left', 'VerticalAlignment', 'bottom');
                 end
@@ -420,4 +420,4 @@ classdef Z_RectUtils
             
         end
     end
-    
+end  
