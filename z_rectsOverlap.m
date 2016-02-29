@@ -11,7 +11,7 @@ elseif isempty(a_rects)
 else
     ol_scores=zeros(size(rects,1),size(a_rects,1));
     for i=1:1:size(a_rects,1)
-        ol_scores(:,i)=Z_RectUtils.rectOverlap(rects(:,1:4),a_rects(i,1:4));
+        ol_scores(:,i)=z_RectUtils.rectOverlap(rects(:,1:4),a_rects(i,1:4));
     end
 end
 

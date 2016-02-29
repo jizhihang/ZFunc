@@ -1,4 +1,4 @@
-classdef Z_RectUtils
+classdef z_RectUtils
     % Utitlies function for boxes and rectangles
     % Boxes are      [left, top, with, height]    [x,y,w,h]
     % Rectangles are [left, top, right, bottom];  [x,y,x,y]
@@ -89,9 +89,9 @@ classdef Z_RectUtils
         
         % Get the union box of all boxes
         function unionBox = getBoxesUnion(boxes)
-            rects = Z_RectUtils.boxes2rects(boxes);
-            unionRect = Z_RectUtils.getRectsUnion(rects);
-            unionBox = Z_RectUtils.rects2boxes(unionRect);
+            rects = z_RectUtils.boxes2rects(boxes);
+            unionRect = z_RectUtils.getRectsUnion(rects);
+            unionBox = z_RectUtils.rects2boxes(unionRect);
         end;
         
         % Get the union rect of all rects
@@ -102,9 +102,9 @@ classdef Z_RectUtils
         end;
         
         function unionBox = getBoxesInter(boxes)
-            rects = Z_RectUtils.boxes2rects(boxes);
-            unionRect = Z_RectUtils.getRectsInter(rects);
-            unionBox = Z_RectUtils.rects2boxes(unionRect);
+            rects = z_RectUtils.boxes2rects(boxes);
+            unionRect = z_RectUtils.getRectsInter(rects);
+            unionBox = z_RectUtils.rects2boxes(unionRect);
         end;
         
         function unionRect = getRectsInter(rects)
@@ -148,7 +148,7 @@ classdef Z_RectUtils
             if ~exist('lineWidth', 'var') || isempty(lineWidth)
                 lineWidth = 3;
             end;
-            boxes=Z_RectUtils.rects2boxes(rects);
+            boxes=z_RectUtils.rects2boxes(rects);
             for i=1:size(boxes,1);
                 rectangle('Position', boxes(i,1:4), 'LineWidth', lineWidth, 'EdgeColor', colors{mod(i-1, 6) + 1});
             end;
@@ -190,7 +190,7 @@ classdef Z_RectUtils
             lr = round([left - extFactors(1)*box_width, right + extFactors(3)*box_width]);
             tb = round([top  - extFactors(2)*box_height, bottom + extFactors(4)*box_height]);
             extRect = [lr(1); tb(1); lr(2); tb(2)];
-            extRect = Z_RectUtils.clipRects(imH, imW, extRect);
+            extRect = z_RectUtils.clipRects(imH, imW, extRect);
         end
         
         
