@@ -117,6 +117,7 @@ classdef z_RectUtils
         
         
         function drawBoxes(boxes, colors, lineWidth,text)
+            boxes=boxes';
             if ~exist('color', 'var') || isempty(color)
                 colors = {'r', 'g', 'b', 'c', 'm', 'y'};
             end;
@@ -141,6 +142,7 @@ classdef z_RectUtils
         
         
         function drawRects(rects, colors, lineWidth,text)
+%             rects=rects';
             if ~exist('color', 'var') || isempty(color)
                 colors = {'r', 'g', 'b', 'c', 'm', 'y'};
             end;

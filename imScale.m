@@ -1,5 +1,7 @@
 function im= imScale(input_im,scale)
 % caution: disable antialiasing
+%function im= imScale(input_im,scale)
+
     img_height=size(input_im,1);
     img_width =size(input_im,2);
 
