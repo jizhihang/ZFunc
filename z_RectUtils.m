@@ -143,7 +143,7 @@ classdef z_RectUtils
         
         function drawRects(rects, colors, lineWidth,text)
 %             rects=rects';
-            if ~exist('color', 'var') || isempty(color)
+            if ~exist('colors', 'var') || isempty(colors)
                 colors = {'r', 'g', 'b', 'c', 'm', 'y'};
             end;
             
@@ -412,7 +412,7 @@ classdef z_RectUtils
                 inter = w.*h;
                 o = inter ./ (area(i) + area(I(1:last-1)) - inter);
                 
-                I = I(find(o<=overlap));
+                I = I(o<=overlap);
             end
             
             pick = pick(1:(counter-1));
