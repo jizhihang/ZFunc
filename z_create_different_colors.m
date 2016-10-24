@@ -1,4 +1,4 @@
-function colors = z_distinguishable_colors(n_colors,bg,func)
+function colors = z_create_different_colors(n_colors,bg,func)
 % DISTINGUISHABLE_COLORS: pick colors that are maximally perceptually distinct
 %
 % When plotting a set of lines, you may want to distinguish them by color.
