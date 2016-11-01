@@ -1,5 +1,5 @@
 function hhh=z_vline(x,in1,in2)
-% function h=vline(x, linetype, label)
+% function h=z_vline(x, linetype, label)
 % 
 % Draws a vertical line on the current axes at the location specified by 'x'.  Optional arguments are
 % 'linetype' (default is 'r:') and 'label', which applies a text label to the graph near the line.  The
@@ -85,7 +85,7 @@ else
 
     y=get(gca,'ylim');
     h=plot([x x],y,linetype);
-    if length(label)
+    if isempty(label)
         xx=get(gca,'xlim');
         xrange=xx(2)-xx(1);
         xunit=(x-xx(1))/xrange;

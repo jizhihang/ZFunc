@@ -3,6 +3,7 @@ function startup()
 
 crt = mfilename('fullpath');
 [crt,~,~]=fileparts(crt);
+addpath(crt);
 addpath(fullfile(crt, 'Gaze'));
 addpath(fullfile(crt, 'export_figure'));
 addpath(fullfile(crt, 'Plot'));

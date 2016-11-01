@@ -5,8 +5,9 @@ function [BF, gf]= computeFDMBlur(inputImage, fixation, sigma)
 n=max([sn sm]);
 
 FDMbinary=zeros(sn,sm);
-FDMbinary(fixation(:,1),fixation(:,2))=1;
-
+for j =1:1:size(fixation,1)
+FDMbinary(fixation(j,1),fixation(j,2))=1;
+end
 fc = n*sqrt(log(2)/(2*(pi^2)*(sigma^2)));
 
 [BF, gf]=antonioGaussian(FDMbinary, fc);
