@@ -6,7 +6,7 @@ n=max([sn sm]);
 
 FDMbinary=zeros(sn,sm);
 for j =1:1:size(fixation,1)
-FDMbinary(fixation(j,1),fixation(j,2))=1;
+FDMbinary(fixation(j,2),fixation(j,1))=1;
 end
 fc = n*sqrt(log(2)/(2*(pi^2)*(sigma^2)));
 
